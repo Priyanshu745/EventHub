@@ -1,4 +1,4 @@
-#EventHub
+# EventHub
 # Event Booking Application
 
 This is a simple event booking application built with React. Users can browse events, view details, and proceed to checkout.
@@ -57,3 +57,4 @@ In the project directory, you can run:
 -   User authentication and authorization.
 -   Payment gateway integration.
 -   Improved UI/UX.
+
