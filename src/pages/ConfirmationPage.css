@@ -1,0 +1,209 @@
+.confirmation-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 200px);
+  padding: 40px 20px;
+  background: linear-gradient(135deg, rgba(79, 70, 229, 0.2) 0%, rgba(35, 166, 213, 0.2) 50%, rgba(231, 60, 126, 0.2) 100%);
+  background-size: 200% 200%;
+  animation: gradient-shift 10s ease infinite alternate;
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+.confirmation-card {
+  width: 100%;
+  max-width: 800px;
+  padding: 40px;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 0 20px rgba(79, 70, 229, 0.2);
+  animation: card-appear 0.8s ease-out;
+  position: relative;
+  overflow: hidden;
+}
+
+.confirmation-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 50% 0%, rgba(79, 70, 229, 0.15), transparent 70%);
+  pointer-events: none;
+}
+
+.confirmation-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 50% 100%, rgba(231, 60, 126, 0.1), transparent 70%);
+  pointer-events: none;
+}
+
+/* Add a glowing effect to the confirmation icon */
+.confirmation-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #4f46e5, #23a6d5);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  color: white;
+  margin: 0 auto 20px;
+  box-shadow: 0 0 20px rgba(79, 70, 229, 0.5);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(79, 70, 229, 0.5); }
+  70% { box-shadow: 0 0 0 15px rgba(79, 70, 229, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(79, 70, 229, 0); }
+}
+
+@keyframes card-appear {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.confirmation-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.confirmation-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #4f46e5, #23a6d5);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  margin: 0 auto 20px;
+  position: relative;
+  animation: pulse 2s infinite;
+}
+
+.confirmation-icon::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 2px solid #4f46e5;
+  animation: ripple 2s linear infinite;
+}
+
+@keyframes ripple {
+  0% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(1.5); opacity: 0; }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(79, 70, 229, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(79, 70, 229, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(79, 70, 229, 0);
+  }
+}
+
+.confirmation-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  background: linear-gradient(to right, #4f46e5, #818cf8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.confirmation-header p {
+  font-size: 1.2rem;
+  color: #6b7280;
+}
+
+.confirmation-details {
+  margin-top: 40px;
+  animation: fadeIn 1s ease-in;
+}
+
+.confirmation-details h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #e5e7eb;
+  padding-bottom: 10px;
+  color: #4f46e5;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed #e5e7eb;
+}
+
+.detail-label {
+  font-weight: 600;
+  color: #4b5563;
+}
+
+.confirmation-number {
+  font-family: monospace;
+  font-size: 1.4rem;
+  background: linear-gradient(to right, #f9fafb, #f3f4f6);
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  margin: 30px 0;
+  border-left: 4px solid #4f46e5;
+  letter-spacing: 2px;
+}
+
+.confirmation-actions {
+  margin-top: 40px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.confirmation-actions .btn {
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.confirmation-actions .btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 7px 14px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .confirmation-card {
+    padding: 30px 20px;
+  }
+  
+  .confirmation-header h1 {
+    font-size: 2rem;
+  }
+  
+  .confirmation-actions {
+    flex-direction: column;
+    gap: 15px;
+  }
+}

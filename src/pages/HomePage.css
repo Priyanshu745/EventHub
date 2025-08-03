@@ -1,0 +1,294 @@
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), 
+              url('https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80');
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  margin: -20px -20px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(79, 70, 229, 0.3) 0%, transparent 70%);
+  animation: pulse-bg 8s ease-in-out infinite;
+}
+
+.hero-section::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  z-index: 1;
+}
+
+/* Add a subtle glow to the search container */
+.search-container {
+  display: flex;
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 0 20px rgba(79, 70, 229, 0.3);
+  border-radius: 4px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  z-index: 10; /* Ensure it's above other elements */
+  position: relative; /* Needed for z-index to work */
+}
+
+.search-container:hover {
+  box-shadow: 0 0 30px rgba(79, 70, 229, 0.5);
+}
+
+.search-container input {
+  flex: 1;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px 0 0 4px;
+  font-size: 1rem;
+}
+
+.search-container button {
+  border-radius: 0 4px 4px 0;
+}
+
+/* Categories Section */
+.categories-section {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.categories-section h2 {
+  margin-bottom: 30px;
+}
+
+.categories-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.category-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #f3f4f6;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100px;
+}
+
+.category-item:hover, .category-item.active {
+  background-color: #4f46e5;
+  color: white;
+}
+
+.category-icon {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.category-name {
+  font-weight: 500;
+}
+
+/* Events Section */
+.events-section {
+  padding: 60px 0;
+}
+
+.events-section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.event-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.event-image {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.event-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.event-card:hover .event-image img {
+  transform: scale(1.1);
+}
+
+.event-category {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #4f46e5;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.event-details {
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.event-details h3 {
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+.event-info {
+  margin-bottom: 15px;
+  color: #6b7280;
+}
+
+.event-info p {
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.event-info i {
+  margin-right: 8px;
+  width: 16px;
+}
+
+.event-price {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #4f46e5;
+  margin-bottom: 15px;
+  margin-top: auto;
+}
+
+.no-events {
+  text-align: center;
+  padding: 40px;
+  font-size: 1.2rem;
+  color: #6b7280;
+}
+
+/* Featured Section */
+.featured-section {
+  padding: 60px 0;
+  background-color: #f3f4f6;
+  margin: 0 -20px;
+  text-align: center;
+}
+
+.featured-section h2 {
+  margin-bottom: 30px;
+}
+
+.features-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.feature-item {
+  flex: 1;
+  min-width: 250px;
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.feature-item h3 {
+  margin-bottom: 15px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .search-container {
+    flex-direction: column;
+  }
+  
+  .search-container input {
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+  
+  .search-container button {
+    border-radius: 4px;
+  }
+  
+  .events-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.event-details .book-btn {
+  width: 100%;
+  margin-top: 15px;
+  padding: 10px;
+  text-align: center;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  z-index: 5; /* Ensure it's above other elements */
+  position: relative; /* Needed for z-index to work */
+  display: block; /* Ensure it takes up space */
+}
+
+.event-details .book-btn:hover {
+  background-color: #3730a3;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+}
