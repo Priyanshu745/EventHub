@@ -18,7 +18,7 @@ To run this project locally, follow these steps:
 1.  **Clone the repository:**
 
     ```bash
-    git clone <repository-url>
+    git clone https://github.com/Priyanshu745/EventHub.git
     cd EventBookingApp
     ```
 
@@ -57,4 +57,5 @@ In the project directory, you can run:
 -   User authentication and authorization.
 -   Payment gateway integration.
 -   Improved UI/UX.
+
 
